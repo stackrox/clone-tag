@@ -12,5 +12,9 @@ jobs:
       contents: write # Required to create a new tag via API
       
     steps:
+    - uses: actions/checkout@v4
+
     - name: Create SemVer Tags
       uses: earldata/create-semver-tags-action@v1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
