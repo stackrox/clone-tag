@@ -2,8 +2,8 @@ name: Maintain semver tags
 
 on:
   push:
-    tags:
-      - '*' # Triggers on all tags
+    branches:
+      - main
 
 jobs:
   tags:
