@@ -63,5 +63,5 @@ runs:
         '/repos/${{ github.repository }}/git/refs' \
         -f ref="refs/tags/$NEW_TAG" \
         -f sha="${{ github.sha }}"
-    
+      echo
       echo "Successfully created $NEW_TAG"
