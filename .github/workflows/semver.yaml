@@ -1,0 +1,16 @@
+name: Maintain semver tags
+
+on:
+  push:
+    tags:
+      - '*' # Triggers on all tags
+
+jobs:
+  tags:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to create a new tag via API
+      
+    steps:
+    - name: Create SemVer Tags
+      uses: earldata/create-semver-tags-action@v1
